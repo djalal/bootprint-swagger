@@ -18,7 +18,7 @@
     "preversion": "npm run thoughtcheck"
   },
   "dependencies": {
-    "bootprint-json-schema": "<1.0.0",
+    "bootprint-json-schema": "git://github.com/jichi-houzz/bootprint-json-schema.git",
     "lodash": "^3.9.3"
   },
   "repository": {

@@ -31,10 +31,22 @@
                     {{operation.[x-hz-version]}}
                 </div>
             {{/if}}
+            {{#if operation.[x-hz-minimumVersion]}}
+                <div id="hz-operation-version" class="sw-default-value">
+                    <span class="sw-default-value-header">Minimum version:</span>
+                    {{operation.[x-hz-minimumVersion]}}
+                </div>
+            {{/if}}
+            {{#if operation.[x-hz-maximumVersion]}}
+                <div id="hz-operation-version" class="sw-default-value">
+                    <span class="sw-default-value-header">Maximum version:</span>
+                    {{operation.[x-hz-maximumVersion]}}
+                </div>
+            {{/if}}
             {{#if operation.[x-hz-versions]}}
                 <div id="hz-operation-versions" class="sw-default-value">
                     <span class="sw-default-value-header">Update versions:</span>
-                    {{>swagger/list-of-labels values=operation.[x-hz-versions]}}
+                    {{#each operation.[x-hz-versions]}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}
                 </div>
             {{/if}}
         </section>

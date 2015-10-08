@@ -1,7 +1,6 @@
 @container-lg: 900px;
 @container-sm: 800px;
 
-
 .table.swagger--summary>tbody>tr>td {
   &.swagger--summary-path {
     vertical-align: middle;
@@ -99,6 +98,9 @@ table.table {
   th.sw-param-data-type {
     .table-header(@msg-sw-param-data-type, 30%);
   }
+  th.sw-param-version {
+    .table-header(@msg-sw-param-version, 5%);
+  }
   th.sw-param-type {
     .table-header(@msg-sw-param-type, 10%);
   }
@@ -109,7 +111,7 @@ table.table {
   th.sw-request-security-scopes {
     .table-header(@msg-sw-request-security-scopes, 50%);
   }
-  
+
   th.sw-response-header-name {
     .table-header(@msg-sw-response-header-name)
   }
