@@ -7,9 +7,15 @@
 <p>{{md info.description}}</p>
 
 {{#if info.version}}
-    <div id="sw-default-version" class="sw-default-value">
+    <div id="hz-default-version" class="sw-default-value">
         <span class="sw-default-value-header">Latest version:</span>
         {{info.version}}
+    </div>
+{{/if}}
+{{#if info.[x-hz-versions]}}
+    <div id="hz-default-versions" class="sw-default-value">
+        <span class="sw-default-value-header">All versions:</span>
+        {{#each info.[x-hz-versions]}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}
     </div>
 {{/if}}
 

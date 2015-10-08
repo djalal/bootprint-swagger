@@ -19,6 +19,24 @@
     <div class="panel-body">
         <section class="sw-operation-description">
             {{md operation.description}}
+            {{#if operation.[x-hz-owner]}}
+                <div id="hz-operation-owner" class="sw-default-value">
+                    <span class="sw-default-value-header">Owner:</span>
+                    <a href="mailto:{{operation.[x-hz-owner]}}">{{operation.[x-hz-owner]}}</a>
+                </div>
+            {{/if}}
+            {{#if operation.[x-hz-version]}}
+                <div id="hz-operation-version" class="sw-default-value">
+                    <span class="sw-default-value-header">Version:</span>
+                    {{operation.[x-hz-version]}}
+                </div>
+            {{/if}}
+            {{#if operation.[x-hz-versions]}}
+                <div id="hz-operation-versions" class="sw-default-value">
+                    <span class="sw-default-value-header">Update versions:</span>
+                    {{>swagger/list-of-labels values=operation.[x-hz-versions]}}
+                </div>
+            {{/if}}
         </section>
         {{! The _request_body variable is filled with the parameter `body` by the preprocessor. }}
         {{#if _show_requst_body_section}}
