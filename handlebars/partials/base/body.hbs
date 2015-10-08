@@ -6,6 +6,13 @@
 <h1>{{info.title}}</h1>
 <p>{{md info.description}}</p>
 
+{{#if info.version}}
+    <div id="sw-default-version" class="sw-default-value">
+        <span class="sw-default-value-header">Latest version:</span>
+        {{info.version}}
+    </div>
+{{/if}}
+
 {{#if consumes}}
     <div id="sw-default-consumes" class="sw-default-value">
         <span class="sw-default-value-header">Default request content-types:</span>
