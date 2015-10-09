@@ -18,7 +18,7 @@
     {{/if}}
     {{#if operation.[x-hz-version]}}
         <div id="hz-operation-version" class="sw-default-value">
-            <span class="sw-default-value-header">Version:</span>
+            <span class="sw-default-value-header">Latest version:</span>
             {{operation.[x-hz-version]}}
         </div>
     {{/if}}
@@ -36,7 +36,7 @@
     {{/if}}
     {{#if operation.[x-hz-versions]}}
         <div id="hz-operation-versions" class="sw-default-value">
-            <span class="sw-default-value-header">Update versions:</span>
+            <span class="sw-default-value-header">All versions:</span>
             {{#each operation.[x-hz-versions]}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}
         </div>
     {{/if}}
