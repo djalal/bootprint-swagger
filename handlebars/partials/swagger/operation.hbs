@@ -25,6 +25,12 @@
                     <a href="mailto:{{operation.[x-hz-owner]}}">{{operation.[x-hz-owner]}}</a>
                 </div>
             {{/if}}
+            {{#if operation.[x-hz-source]}}
+                <div id="hz-operation-source" class="sw-default-value">
+                    <span class="sw-default-value-header">Source:</span>
+                    <a href="{{operation.[x-hz-source]}}" target="_blank">{{operation.[x-hz-source]}}</a>
+                </div>
+            {{/if}}
             {{#if operation.[x-hz-version]}}
                 <div id="hz-operation-version" class="sw-default-value">
                     <span class="sw-default-value-header">Version:</span>
