@@ -19,10 +19,10 @@
     <div class="panel-body">
         <section class="sw-operation-description">
             {{md operation.description}}
-            {{#if operation.[x-hz-owner]}}
-                <div id="hz-operation-owner" class="sw-default-value">
-                    <span class="sw-default-value-header">Owner:</span>
-                    <a href="mailto:{{operation.[x-hz-owner]}}">{{operation.[x-hz-owner]}}</a>
+            {{#if operation.[x-hz-author]}}
+                <div id="hz-operation-author" class="sw-default-value">
+                    <span class="sw-default-value-header">Author:</span>
+                    <a href="mailto:{{operation.[x-hz-author]}}">{{operation.[x-hz-author]}}</a>
                 </div>
             {{/if}}
             {{#if operation.[x-hz-source]}}
