@@ -17,45 +17,12 @@
         {{/if}}
     </div>
     <div class="panel-body">
-        <section class="sw-operation-description">
-            {{md operation.description}}
-            {{#if operation.[x-hz-author]}}
-                <div id="hz-operation-author" class="sw-default-value">
-                    <span class="sw-default-value-header">Author:</span>
-                    <a href="mailto:{{operation.[x-hz-author]}}">{{operation.[x-hz-author]}}</a>
-                </div>
-            {{/if}}
-            {{#if operation.[x-hz-source]}}
-                <div id="hz-operation-source" class="sw-default-value">
-                    <span class="sw-default-value-header">Source:</span>
-                    <a href="{{operation.[x-hz-source]}}" target="_blank">{{operation.[x-hz-source]}}</a>
-                </div>
-            {{/if}}
-            {{#if operation.[x-hz-version]}}
-                <div id="hz-operation-version" class="sw-default-value">
-                    <span class="sw-default-value-header">Version:</span>
-                    {{operation.[x-hz-version]}}
-                </div>
-            {{/if}}
-            {{#if operation.[x-hz-minimumVersion]}}
-                <div id="hz-operation-version" class="sw-default-value">
-                    <span class="sw-default-value-header">Minimum version:</span>
-                    {{operation.[x-hz-minimumVersion]}}
-                </div>
-            {{/if}}
-            {{#if operation.[x-hz-maximumVersion]}}
-                <div id="hz-operation-version" class="sw-default-value">
-                    <span class="sw-default-value-header">Maximum version:</span>
-                    {{operation.[x-hz-maximumVersion]}}
-                </div>
-            {{/if}}
-            {{#if operation.[x-hz-versions]}}
-                <div id="hz-operation-versions" class="sw-default-value">
-                    <span class="sw-default-value-header">Update versions:</span>
-                    {{#each operation.[x-hz-versions]}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}
-                </div>
-            {{/if}}
-        </section>
+        {{>swagger/operationInformation}}
+        {{#if operation.description}}
+            <section class="sw-operation-description">
+                {{md operation.description}}
+            </section>
+        {{/if}}
         {{! The _request_body variable is filled with the parameter `body` by the preprocessor. }}
         {{#if _show_requst_body_section}}
             {{>swagger/request-body consumes=operation.consumes body=_request_body}}
