@@ -4,10 +4,10 @@
 --}}
 {{! If global is set, attach an id to the table row }}
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-1">
         {{md response.description}}
     </div>
-    <div class="col-md-6 sw-response-model">{{>swagger/model model=response.schema}}</div>
+    <div class="col-md-11 sw-response-model">{{>swagger/model model=response.schema}}</div>
 
     {{#if response.headers}}
         <div class="col-md-12">
